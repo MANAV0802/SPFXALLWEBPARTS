@@ -1,0 +1,145 @@
+/* =========================
+   Wrapper & Header
+========================= */
+.wrapper {
+  width: 100%;
+  max-width: 100%;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid #d0d7de;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+.header {
+  font-size: 22px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   Chat Area
+========================= */
+.chatContainer {
+  height: 360px;
+  overflow-y: auto;
+  padding-right: 6px;
+  margin-bottom: 16px;
+}
+
+/* =========================
+   Message Rows
+========================= */
+.messageRow {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 12px;
+}
+
+.userRow {
+  justify-content: flex-end;
+}
+
+.botRow {
+  justify-content: flex-start;
+}
+
+/* =========================
+   Avatars
+========================= */
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin: 0 8px;
+}
+
+/* =========================
+   Message Bubbles
+========================= */
+.messageBubble {
+  max-width: 75%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  font-size: 15px;
+  line-height: 1.45;
+  word-wrap: break-word;
+}
+
+.userBubble {
+  background: #0078d4;
+  color: #ffffff;
+  border-bottom-right-radius: 4px;
+}
+
+.botBubble {
+  background: #f3f3f3;
+  color: #333333;
+  border-bottom-left-radius: 4px;
+}
+
+/* =========================
+   List Formatting (AI Answers)
+========================= */
+.botBubble ul {
+  margin: 6px 0 6px 18px;
+  padding: 0;
+}
+
+.botBubble li {
+  margin-bottom: 4px;
+}
+
+/* =========================
+   Input Area
+========================= */
+.inputArea {
+  display: flex;
+  gap: 10px;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 12px;
+}
+
+.inputBox {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid #c8c8c8;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+}
+
+.inputBox:focus {
+  border-color: #0078d4;
+}
+
+.sendButton {
+  background: #0078d4;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.2s ease;
+}
+
+.sendButton:hover {
+  background: #005a9e;
+}
+
+.sendButton:disabled {
+  background: #a6c8e8;
+  cursor: not-allowed;
+}

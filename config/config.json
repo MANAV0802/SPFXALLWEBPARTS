@@ -11,6 +11,14 @@
          {
           "entrypoint": "./lib/webparts/weatherAqiWidget/WeatherAqiWidgetWebPart.js",
           "manifest": "./src/webparts/weatherAqiWidget/WeatherAqiWidgetWebPart.manifest.json"
+        },
+         {
+          "entrypoint": "./lib/webparts/hrAssistantAiwp/HrAssistantAiwpWebPart.js",
+          "manifest": "./src/webparts/hrAssistantAiwp/HrAssistantAiwpWebPart.manifest.json"
+        },
+           {
+          "entrypoint": "./lib/webparts/hrAnnouncements/HrAnnouncementsWebPart.js",
+          "manifest": "./src/webparts/hrAnnouncements/HrAnnouncementsWebPart.manifest.json"
         }
       ]
     }

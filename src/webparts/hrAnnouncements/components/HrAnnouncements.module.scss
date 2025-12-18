@@ -1,0 +1,255 @@
+.container {
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.headerIcon {
+  font-size: 22px;
+  color: #0078d4;
+}
+
+.emptyText {
+  color: #666;
+}
+
+/* =======================
+   Cards
+======================= */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  border-left: 5px solid #0078d4;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.title {
+  font-weight: 600;
+}
+
+.description {
+  color: #444;
+  margin-top: 6px;
+}
+
+.date {
+  color: #666;
+}
+
+/* =======================
+   Bottom Sheet
+======================= */
+.bottomSheetBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 1000;
+}
+
+.bottomSheet {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-height: 75%;
+  background: #ffffff;
+  border-radius: 18px 18px 0 0;
+  padding: 20px;
+  animation: slideUp 0.3s ease;
+  overflow-y: auto;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.sheetHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sheetTitle {
+  font-weight: 600;
+}
+
+.closeIcon {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.sheetMeta {
+  color: #666;
+  margin-top: 4px;
+}
+
+.sheetBody {
+  line-height: 1.6;
+  color: #333;
+  margin-top: 10px;
+}
+
+.detailAudience {
+  margin-top: 16px;
+  padding: 8px 12px;
+  background: #f3f6fb;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 13px;
+}
+
+.centerModal {
+  width: 420px;
+  border-radius: 12px;
+}
+
+.modalContent {
+  padding: 20px;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalTitle {
+  font-weight: 600;
+}
+
+.closeIcon {
+  cursor: pointer;
+}
+
+.modalMeta {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.modalBody {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.pinned {
+  border-left: 6px solid #d13438; // red for importance
+  background: #fff5f5;
+}
+
+.pinBadge {
+  margin-left: 8px;
+  font-size: 14px;
+}
+
+.newBadge {
+  margin-left: 8px;
+  background: #d13438;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+/* Read / Unread states */
+.read {
+  opacity: 0.6;
+  background: #f8f8f8;
+}
+
+.unread {
+  border-left: 6px solid #0078d4;
+}
+
+/* ==========================
+   POPUP STYLES
+========================== */
+
+/* POPUP */
+.popupContainer {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.popupContent {
+  padding: 20px;
+  max-width: 520px;
+}
+
+.popupHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popupTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.popupIcon {
+  font-size: 20px;
+  color: #2563eb;
+}
+
+.popupTitle {
+  font-weight: 600;
+}
+
+.popupClose {
+  cursor: pointer;
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.popupMeta {
+  margin-top: 8px;
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.popupBody {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.popupFooter {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.popupCloseBtn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+
+  &:hover {
+    background: #1e40af;
+  }
+}
