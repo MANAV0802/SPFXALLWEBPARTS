@@ -7,6 +7,10 @@
         {
           "entrypoint": "./lib/webparts/flightStatus/FlightStatusWebPart.js",
           "manifest": "./src/webparts/flightStatus/FlightStatusWebPart.manifest.json"
+        },
+         {
+          "entrypoint": "./lib/webparts/weatherAqiWidget/WeatherAqiWidgetWebPart.js",
+          "manifest": "./src/webparts/weatherAqiWidget/WeatherAqiWidgetWebPart.manifest.json"
         }
       ]
     }
