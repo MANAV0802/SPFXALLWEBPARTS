@@ -19,12 +19,18 @@
            {
           "entrypoint": "./lib/webparts/hrAnnouncements/HrAnnouncementsWebPart.js",
           "manifest": "./src/webparts/hrAnnouncements/HrAnnouncementsWebPart.manifest.json"
+        },
+                {
+          "entrypoint": "./lib/webparts/plannerBoard/PlannerBoardWebPart.js",
+          "manifest": "./src/webparts/plannerBoard/PlannerBoardWebPart.manifest.json"
         }
       ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "FlightStatusWebPartStrings": "lib/webparts/flightStatus/loc/{locale}.js"
+    "FlightStatusWebPartStrings": "lib/webparts/flightStatus/loc/{locale}.js",
+    "HrAnnouncementsWebPartStrings": "lib/webparts/hrAnnouncements/loc/{locale}.js",
+    "HrAssistantAiwpWebPartStrings": "lib/webparts/hrAssistantAiwp/loc/{locale}.js"
   }
 }

@@ -1,0 +1,1145 @@
+/* =========================================================
+   GLOBAL WRAPPER (Modern Clean UI)
+========================================================= */
+.plannerWrapper {
+  padding: 30px;
+  background: linear-gradient(180deg, #f3f7fb 0%, #ffffff 100%);
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  color: #222;
+}
+
+/* Header */
+.plannerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.plannerHeader h2 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #0078d4;
+}
+
+.primaryButton {
+  background: linear-gradient(90deg, #0078d4, #0094ff);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(3, 104, 204, 0.25);
+  transition: 0.2s;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   BOARD LAYOUT
+========================================================= */
+.board {
+  display: flex;
+  gap: 28px;
+  overflow-x: auto;
+  width: 100%;
+  padding-bottom: 12px;
+}
+
+.board::-webkit-scrollbar {
+  height: 8px;
+}
+.board::-webkit-scrollbar-thumb {
+  background: #d0d7e0;
+  border-radius: 10px;
+}
+
+/* =========================================================
+   BUCKETS
+========================================================= */
+.bucketColumn {
+  flex: 0 0 350px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border-top: 8px solid #0078d4;
+  height: 82vh;
+  overflow-y: auto;
+}
+
+/* Bucket header */
+.bucketHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bucketHeader h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Add Task button */
+.addTaskBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #eef6ff;
+  border: 1px solid #cfe4ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.addTaskBtn:hover {
+  transform: scale(1.1);
+}
+
+/* Scroll section */
+.bucketBody {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  overflow-y: auto;
+}
+
+/* Bucket Colors */
+.Backlog {
+  border-top-color: #979dac !important;
+}
+.ToDo {
+  border-top-color: #2d9bf0 !important;
+}
+.InProgress {
+  border-top-color: #ff8c00 !important;
+}
+.Done {
+  border-top-color: #27ae60 !important;
+}
+
+/* =========================================================
+   TASK CARD (Modern Clean UI)
+========================================================= */
+.taskCard {
+  background: #ffffff;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: 0.2s ease;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.taskCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskTitle {
+  white-space: normal;
+  display: block;
+  height: auto;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+}
+
+.taskDescription {
+  font-size: 14px;
+  color: #4e5b6a;
+  margin-top: 10px;
+}
+
+/* Dots menu button */
+.menuButton {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* =========================================================
+   CONTEXT MENU (3-dot menu)
+========================================================= */
+.contextMenu {
+  position: absolute;
+  background: #ffffff;
+  padding: 8px 0;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 140px;
+}
+
+.menuItem {
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.menuItem:hover {
+  background: #eef5ff;
+}
+
+/* =========================================================
+   MOVE POPUP
+========================================================= */
+.movePopup {
+  background: #ffffff;
+  width: 150px;
+  border-radius: 12px;
+  padding: 14px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  z-index: 999999;
+  position: absolute;
+
+}
+
+.moveTitle {
+  font-weight: 700;
+  font-size: 14px;
+  padding: 0 15px 8px 15px;
+}
+
+.moveOption {
+  padding: 10px 18px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.moveOption:hover {
+  background: #eef5ff;
+}
+
+.popupClose {
+  width: 90%;
+  margin: 8px auto 0 auto;
+  display: block;
+  padding: 8px;
+  background: #f3f3f3;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dummy root for portal */
+.popupRoot {
+  position: relative;
+}
+
+/* =========================================================
+   YOUR MODAL STYLES (UNCHANGED)
+========================================================= */
+
+/* --- Full modal styles pasted EXACTLY as you wrote --- */
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.taskModalCard {
+  width: 520px;
+  max-height: 90vh;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.22);
+  border: 1px solid #eef1f6;
+  padding: 0 28px 24px 28px;
+  overflow-y: auto;
+  animation: fadeInModal 0.25s ease-out;
+}
+
+.cardHeader {
+  padding: 22px 0 14px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeIcon {
+  font-size: 20px;
+  background: #f2f4f8;
+  border: none;
+  cursor: pointer;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.cardBody {
+  margin-top: 6px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.gridTwo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.inputField,
+.textareaField,
+.selectField {
+  padding: 11px;
+  border-radius: 10px;
+  border: 1px solid #d0d7de;
+  background: #fafbff;
+}
+
+.textareaField {
+  min-height: 110px;
+}
+
+.checklistContainer {
+  background: #f9fbff;
+  border: 1px solid #dde3ee;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.checklistRow {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.removeChecklistBtn {
+  background: #f8d7da;
+  border-radius: 8px;
+  padding: 7px 10px;
+  border: none;
+}
+
+.addChecklistBtn {
+  width: 100%;
+  background: #0078d4;
+  color: white;
+  padding: 11px;
+  border-radius: 10px;
+  border: none;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 16px;
+  margin-top: 12px;
+  border-top: 1px solid #eef0f5;
+}
+
+.saveButton {
+  background: #0078d4;
+  color: white;
+  padding: 9px 20px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* =========================================================
+   ACTIVITY MODAL (UNCHANGED)
+========================================================= */
+
+.activityModalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.activityModal {
+  background: #fff;
+  width: 480px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.activityItem {
+  background: #f4f6f8;
+  padding: 12px;
+  border-left: 4px solid #0078d4;
+  border-radius: 6px;
+}
+
+.activityCloseBtn {
+  padding: 10px;
+  background: #0078d4;
+  color: white;
+  border-radius: 6px;
+  border: none;
+}
+
+/* --------------------------------------------------------
+   FIX: REQUIRED CLASSES FOR ActivityModal.tsx
+--------------------------------------------------------- */
+
+.modalTitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #333;
+
+  &:hover {
+    color: #000;
+  }
+}
+
+.activityList {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.timestamp {
+  font-size: 12px;
+  margin-top: 6px;
+  opacity: 0.7;
+}
+
+/* --------------------------------------------------------
+   FIX: REQUIRED CLASSES FOR NewTaskForm.tsx
+--------------------------------------------------------- */
+
+.checklistBox {
+  background: #f9fbff;
+  border: 1px solid #dde3ee;
+  padding: 12px;
+  border-radius: 12px;
+  margin-top: 6px;
+}
+
+.checklistInput {
+  flex: 1;
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: 1px solid #d0d7de;
+  background: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.checklistInput:focus {
+  border-color: #0078d4;
+  background: #f0f7ff;
+}
+
+.emptyChecklist {
+  text-align: center;
+  color: #7b8497;
+  font-size: 14px;
+  margin: 4px 0 8px 0;
+}
+
+.cancelButton {
+  background: #eef0f3;
+  padding: 9px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cancelButton:hover {
+  background: #e0e2e6;
+}
+
+/* ============================================================
+   COMPACT MODERN ADD-TASK MODAL (BEST VERSION)
+============================================================= */
+
+.taskModalCard {
+  width: 380px; /* Perfect small size */
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+  animation: fadeInModal 0.18s ease-out;
+}
+
+/* HEADER */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.cardHeader h2 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.closeIcon {
+  width: 26px;
+  height: 26px;
+  font-size: 15px;
+  background: #f4f5f7;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LABELS */
+.formGroup label {
+  font-size: 13px;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+/* INPUT FIELDS SMALL + CLEAN */
+.inputField,
+.textareaField,
+.selectField {
+  padding: 7px 8px;
+  font-size: 13px;
+  border-radius: 6px;
+  border: 1px solid #d3d9e4;
+  background: #fafbff;
+}
+
+.textareaField {
+  min-height: 70px;
+  resize: vertical;
+}
+
+.formGroup {
+  margin-bottom: 12px;
+}
+
+/* CHECKLIST CONTAINER */
+.checklistBox {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #dce2ec;
+  background: #fafbfe;
+}
+
+.emptyChecklist {
+  text-align: center;
+  color: #8992a5;
+  font-size: 12px;
+  margin: 6px 0;
+}
+
+/* CHECKLIST ROW — SMALL */
+.checklistRow {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.checklistInput {
+  flex: 1;
+  padding: 6px 8px;
+  font-size: 13px;
+  border-radius: 6px;
+  border: 1px solid #d4d9e4;
+}
+
+/* SMALL REMOVE ICON */
+.removeChecklistBtn {
+  padding: 3px 6px;
+  font-size: 11px;
+  background: #ffe0e0;
+  color: #aa2222;
+  border-radius: 5px;
+}
+
+/* SMALL + CLEAN "ADD CHECKLIST" BUTTON */
+.addChecklistBtn {
+  margin-top: 6px;
+  padding: 7px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  width: fit-content;
+  border-radius: 6px;
+  background: #0078d4;
+  color: white;
+}
+
+/* TWO COLUMN GRID */
+.gridTwo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* FOOTER — SMALL + RIGHT ALIGNED */
+.cardFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid #eef1f5;
+  margin-top: 6px;
+}
+
+.cancelButton,
+.saveButton {
+  padding: 7px 14px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+.saveButton {
+  background: #0078d4;
+  color: white;
+}
+
+.taskCardBacklog {
+  border-left: 5px solid  #979dac;
+}
+
+.taskCardToDo {
+  border-left: 5px solid #2980b9;
+}
+
+.taskCardInProgress {
+  border-left: 5px solid #e67e22;
+}
+
+.taskCardDone {
+  border-left: 5px solid #27ae60;
+}
+
+/* Default small add button */
+.bucketAddButton {
+  color: #fff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Colors based on bucket */
+.addBacklog {
+  background: #6b7280; /* gray */
+}
+.addBacklog:hover {
+  background: #4b5563;
+}
+
+.addToDo {
+  background: #0078d4; /* blue */
+}
+.addToDo:hover {
+  background: #005fa3;
+}
+
+.addInProgress {
+  background: #f59e0b; /* orange */
+}
+.addInProgress:hover {
+  background: #d97706;
+}
+
+.addDone {
+  background: #059669; /* green */
+}
+.addDone:hover {
+  background: #047857;
+}
+
+/* ------------------------------
+   CHECKLIST INSIDE TASK CARD
+------------------------------ */
+
+.taskChecklist {
+  margin-top: 10px;
+}
+
+.checkItem {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 2px 0;
+  font-size: 13px;
+}
+
+.checkDone {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* ------------------------------
+   CHECKLIST PROGRESS BAR
+------------------------------ */
+
+.checkProgressWrapper {
+  margin-bottom: 8px;
+}
+
+.checkProgressBar {
+  width: 100%;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.checkProgressFill {
+  height: 100%;
+  background: #0078d4; /* progress color */
+  border-radius: 4px;
+  transition: width 0.25s ease;
+}
+
+.checkProgressText {
+  font-size: 12px;
+  margin-top: 4px;
+  color: #555;
+}
+
+.priorityTag {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.priorityLow {
+  background: #e0f2fe;
+  color: #0284c7;
+}
+
+.priorityMedium {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.priorityHigh {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* -------------------------
+    CALENDAR VIEW STYLES
+-------------------------- */
+
+.calendarWrapper {
+  width: 100%;
+  padding: 20px;
+  background: #ffffff;
+}
+
+/* HEADER (Month title + navigation) */
+.calendarHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.calNavBtn {
+  border: none;
+  background: #f3f4f6;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.calNavBtn:hover {
+  background: #e5e7eb;
+}
+
+.calendarMonthLabel {
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* WEEKDAY ROW */
+.calendarWeekHeader {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 6px;
+}
+
+.calendarWeekDay {
+  text-align: center;
+  font-weight: 600;
+  color: #4b5563;
+  padding: 8px 0;
+}
+
+/* MAIN GRID */
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.calendarWeekRow {
+  display: contents; /* keep 7×N layout */
+}
+
+/* CELLS */
+.calendarCell {
+  min-height: 120px;
+  border-right: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 6px;
+  background: #ffffff;
+  transition: 0.2s;
+  position: relative;
+}
+
+.calendarCell:hover {
+  background: #f9fafb;
+}
+
+.calendarCell:last-child {
+  border-right: none;
+}
+
+.calendarEmpty {
+  background: #f9fafb;
+}
+
+.calendarToday {
+  background: #e0f2ff !important;
+  border: 2px solid #38bdf8 !important;
+}
+
+.calendarDateNumber {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+/* TASK CHIPS */
+.calendarTasks {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.calendarTaskChip {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.2s;
+}
+
+.calendarTaskChip:hover {
+  background: #e0f2ff;
+}
+
+/* Sky-blue theme for all priority levels */
+.low,
+.medium,
+.high {
+  background: #e0f2ff !important;
+  border: 1px solid #38bdf8 !important;
+  color: #0369a1 !important;
+}
+
+/* -------------------------
+   PRIORITY TAGS (cards)
+-------------------------- */
+
+.priorityTag {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.priorityLow {
+  background-color: #d9edff;
+  color: #0b71c7;
+}
+
+.priorityMedium {
+  background-color: #fff4cc;
+  color: #d48806;
+}
+
+.priorityHigh {
+  background-color: #ffe1e1;
+  color: #d93025;
+}
+
+/* -------------------------
+    VIEW TOGGLE BUTTONS
+-------------------------- */
+
+.viewToggle {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.viewToggle button {
+  padding: 8px 16px;
+  border: 1px solid #d0d0d0;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.viewToggle button:hover {
+  background: #f2f2f2;
+}
+
+.viewToggleActive {
+  background: #0078d4 !important;
+  color: white !important;
+  border-color: #0078d4 !important;
+}
+
+/* -------------------------
+   MONTH PICKER POPUP
+-------------------------- */
+
+.monthPickerPopup {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 330px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  z-index: 999;
+}
+
+/* popup header (for both year + decade view) */
+.yearRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.yearLabel {
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer; /* click to toggle year/decade */
+}
+
+.yearBtn {
+  background: #f3f4f6;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.yearBtn:hover {
+  background: #e5e7eb;
+}
+
+/* MONTH GRID (year view) */
+.monthGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.monthCell {
+  padding: 10px;
+  border-radius: 8px;
+  background: #f3f4f6;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.monthCell:hover {
+  background: #e0f2ff;
+}
+
+.activeMonth {
+  background: #0078d4 !important;
+  color: #ffffff !important;
+}
+
+/* YEAR GRID (decade view) */
+/* -----------------------------
+   YEAR PICKER GRID (3×4 layout)
+--------------------------------*/
+.yearGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 10px 0;
+}
+
+/* Single year cell */
+.yearCell {
+  padding: 10px 0;
+  background: #f3f4f6;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.yearCell:hover {
+  background: #e0f2ff;
+}
+
+/* Selected year */
+.activeYear {
+  background: #38bdf8 !important;
+  color: white !important;
+  font-weight: 600;
+}
+
+/* -----------------------------------------------
+   YEAR GRID (Decade View)
+-------------------------------------------------- */
+.yearGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.yearCell {
+  padding: 12px;
+  border-radius: 8px;
+  background: #f3f4f6;
+  text-align: center;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
+  border: 1px solid transparent;
+}
+
+.yearCell:hover {
+  background: #e0f2ff;
+}
+
+.activeYear {
+  background: #0078d4 !important;
+  color: #ffffff !important;
+  border-color: #0078d4 !important;
+}
+
+/* Priority-colored task chips */
+
+.lowChip {
+  background: #d9edff !important;
+  border: 1px solid #7cc4ff !important;
+  color: #004e86 !important;
+}
+
+.mediumChip {
+  background: #fff4cc !important;
+  border: 1px solid #ffd86a !important;
+  color: #9a6800 !important;
+}
+
+.highChip {
+  background: #ffe1e1 !important;
+  border: 1px solid #ff7a7a !important;
+  color: #b80000 !important;
+}
+
+.suggestionBox {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  max-height: 180px;
+  overflow-y: auto;
+  z-index: 99999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+.suggestionItem {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestionItem:hover {
+  background: #f2f2f2;
+}
