@@ -8,25 +8,33 @@
           "entrypoint": "./lib/webparts/flightStatus/FlightStatusWebPart.js",
           "manifest": "./src/webparts/flightStatus/FlightStatusWebPart.manifest.json"
         },
+        {
+          "entrypoint": "./lib/webparts/crudoperations/CrudoperationsWebPart.js",
+          "manifest": "./src/webparts/crudoperations/CrudoperationsWebPart.manifest.json"
+        },
+        {
+          "entrypoint": "./lib/webparts/chartspfx/ChartspfxWebPart.js",
+          "manifest": "./src/webparts/chartspfx/ChartspfxWebPart.manifest.json"
+        },
          {
+          "entrypoint": "./lib/webparts/mapIntegration/MapIntegrationWebPart.js",
+          "manifest": "./src/webparts/mapIntegration/MapIntegrationWebPart.manifest.json"
+        },
+        {
           "entrypoint": "./lib/webparts/weatherAqiWidget/WeatherAqiWidgetWebPart.js",
           "manifest": "./src/webparts/weatherAqiWidget/WeatherAqiWidgetWebPart.manifest.json"
         },
-         {
+        {
           "entrypoint": "./lib/webparts/hrAssistantAiwp/HrAssistantAiwpWebPart.js",
           "manifest": "./src/webparts/hrAssistantAiwp/HrAssistantAiwpWebPart.manifest.json"
         },
-           {
+        {
           "entrypoint": "./lib/webparts/hrAnnouncements/HrAnnouncementsWebPart.js",
           "manifest": "./src/webparts/hrAnnouncements/HrAnnouncementsWebPart.manifest.json"
         },
-                {
+        {
           "entrypoint": "./lib/webparts/plannerBoard/PlannerBoardWebPart.js",
           "manifest": "./src/webparts/plannerBoard/PlannerBoardWebPart.manifest.json"
-        },
-         {
-          "entrypoint": "./lib/webparts/organizationChart/OrganizationChartWebPart.js",
-          "manifest": "./src/webparts/organizationChart/OrganizationChartWebPart.manifest.json"
         }
       ]
     }
@@ -35,8 +43,10 @@
   "localizedResources": {
     "FlightStatusWebPartStrings": "lib/webparts/flightStatus/loc/{locale}.js",
     "HrAnnouncementsWebPartStrings": "lib/webparts/hrAnnouncements/loc/{locale}.js",
-    "HrAssistantAiwpWebPartStrings": "lib/webparts/hrAssistantAiwp/loc/{locale}.js",
-    "OrganizationChartWebPartStrings": "lib/webparts/organizationChart/loc/{locale}.js",
-    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
-  }
+    "HrAssistantAiwpWebPartStrings": "lib/webparts/hrAssistantAiwp/loc/{locale}.js",    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js",
+      "CrudoperationsWebPartStrings": "lib/webparts/crudoperations/loc/{locale}.js",
+      "ChartspfxWebPartStrings": "lib/webparts/chartspfx/loc/{locale}.js",
+      "MapIntegrationWebPartStrings": "lib/webparts/mapIntegration/loc/{locale}.js",
+      "WeatherAqiWidgetWebPartStrings": "lib/webparts/weatherAqiWidget/loc/{locale}.js"  }
 }

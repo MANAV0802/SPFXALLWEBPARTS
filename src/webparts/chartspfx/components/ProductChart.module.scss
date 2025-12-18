@@ -1,0 +1,315 @@
+/* ------------------------------
+   Page Layout
+-------------------------------*/
+
+.container {
+  padding: 24px;
+  background: #f5f7fb;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.pageTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+  color: #222;
+}
+
+.subTitle {
+  margin-top: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+}
+
+/* ------------------------------
+   KPI Row
+-------------------------------*/
+
+.kpiGrid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: nowrap; /* 🔥 Force single row */
+}
+
+.kpiCard {
+  background: #ffffff;
+  width: 90px; /* 🔥 Equal width */
+  height: 110px; /* 🔥 Square-ish shape */
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center;
+  flex-shrink: 0; /* Do not shrink */
+}
+
+.kpiLabel {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.kpiValue {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* ------------------------------
+   Filters
+-------------------------------*/
+
+.filterRow {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: nowrap; /* <-- keep in one row */
+}
+.filterCard {
+  background: #ffffff;
+  padding: 12px;
+  width: 180px; /* <-- Fixed equal width */
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 20; /*        /* <-- do NOT shrink */
+}
+
+.filterLabel {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.filterSelect {
+  padding: 8px;
+  position: relative;
+  z-index: 25;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.filterSelect:focus {
+  border-color: #0078d4;
+}
+
+.hintText {
+  font-size: 11px;
+  color: #999;
+  margin-top: 6px;
+}
+
+/* ------------------------------
+   Chart Toggle Buttons
+-------------------------------*/
+
+.chartToolbar {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.chartButton {
+  padding: 10px 22px; /* Bigger buttons */
+  font-size: 14px;
+  font-weight: 600;
+  background: white;
+  border-radius: 24px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.chartButton:hover {
+  background: #f2f2f2;
+  border-color: #bbb;
+}
+
+.chartButtonActive {
+  background: #0078d4;
+  color: white;
+  border-color: #0078d4;
+}
+
+/* ------------------------------
+   Charts Section
+-------------------------------*/
+
+.chartsGrid {
+  display: flex;
+  justify-content: center; /* CENTER the chart */
+  width: 100%;
+  margin-top: 10px;
+}
+
+.chartCard {
+  background: white;
+  width: 85%; /* 🔥 Bigger card (was 70%) */
+  max-width: 900px; /* Optional limit */
+  min-width: 350px;
+  height: 420px; /* 🔥 Increased height */
+  padding: 24px;
+  border-radius: 16px; /* More premium */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; /* Center chart content */
+}
+
+.chartTitle {
+  margin: 0 0 14px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Chart canvas styling */
+.chartCard canvas {
+  margin-top: 10px;
+  max-width: 100%;
+  max-height: 350px; /* Controls chart size */
+}
+/* ------------------------------
+   Ratings Table
+-------------------------------*/
+
+.ratingsSection {
+  margin-top: 24px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.sectionTitle {
+  padding-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 12px;
+}
+
+/* Scrollable table (5–7 rows) */
+.tableContainer {
+  max-height: 260px; /* fits ~6 rows */
+  overflow-y: auto;
+}
+
+.productTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHeader {
+  background: #fafafa;
+  font-weight: 600;
+  text-align: left;
+  padding: 10px;
+  font-size: 13px;
+  border-bottom: 1px solid #eee;
+}
+
+.tableCell {
+  padding: 10px;
+  border-bottom: 1px solid #f1f1f1;
+  font-size: 13px;
+}
+
+.ratingBadge {
+  // background: #fff4cc;
+  // padding: 4px 10px;
+  border-radius: 15px;
+  // color: #8a6d1c;
+  font-weight: 600;
+  font-size: 12px;
+}
+.emptyState {
+  padding: 20px 0;
+  font-size: 13px;
+  color: #777;
+}
+/* Wrapper fixes all click-blocking issues */
+.dropdownWrapper {
+  position: relative;
+  z-index: 9999;      /* on top of chart */
+  pointer-events: auto;
+}
+
+/* Select should be highest clickable item */
+.filterSelect {
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 99999;
+}
+
+/* Fix dropdown blocked by chart */
+.dropdownFix {
+  position: relative;
+  z-index: 99999;
+  pointer-events: auto;
+}
+
+.filterSelect {
+  position: relative;
+  z-index: 999999 !important;
+  pointer-events: auto !important;
+}
+
+/* Chart should NOT block dropdown clicks */
+.chartCard canvas {
+  pointer-events: none !important;
+}
+
+
+/* ------------------------------
+   Responsive
+-------------------------------*/
+
+@media (max-width: 768px) {
+  .chartCard {
+    width: 100%;
+    height: 380px;
+    padding: 16px;
+  }
+
+  .chartCard canvas {
+    max-height: 300px;
+  }
+}
+@media (max-width: 900px) {
+  .filterRow {
+    flex-wrap: wrap; /* Stack only on smaller screens */
+    justify-content: center;
+  }
+
+  .filterCard {
+    width: 90%;
+  }
+  .kpiGrid {
+    flex-wrap: wrap;
+  }
+
+  .kpiCard {
+    width: 45%;
+    margin-bottom: 10px;
+  }
+}
