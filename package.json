@@ -28,6 +28,7 @@
     "chart.js": "^3.9.1",
     "leaflet": "^1.9.4",
     "leaflet-routing-machine": "^3.2.12",
+    "mermaid": "^10.9.5",
     "react": "17.0.1",
     "react-chartjs-2": "^4.3.1",
     "react-dom": "17.0.1",

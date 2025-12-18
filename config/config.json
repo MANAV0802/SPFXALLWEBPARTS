@@ -35,6 +35,10 @@
         {
           "entrypoint": "./lib/webparts/plannerBoard/PlannerBoardWebPart.js",
           "manifest": "./src/webparts/plannerBoard/PlannerBoardWebPart.manifest.json"
+        },
+                {
+          "entrypoint": "./lib/webparts/mermaidDiagramWebPart/MermaidDiagramWebPartWebPart.js",
+          "manifest": "./src/webparts/mermaidDiagramWebPart/MermaidDiagramWebPartWebPart.manifest.json"
         }
       ]
     }
