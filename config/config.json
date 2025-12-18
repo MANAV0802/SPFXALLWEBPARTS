@@ -39,6 +39,10 @@
                 {
           "entrypoint": "./lib/webparts/mermaidDiagramWebPart/MermaidDiagramWebPartWebPart.js",
           "manifest": "./src/webparts/mermaidDiagramWebPart/MermaidDiagramWebPartWebPart.manifest.json"
+        },
+                {
+          "entrypoint": "./lib/webparts/addFolderAndSubFolderToDocumentLibrary/AddFolderAndSubFolderToDocumentLibraryWebPart.js",
+          "manifest": "./src/webparts/addFolderAndSubFolderToDocumentLibrary/AddFolderAndSubFolderToDocumentLibraryWebPart.manifest.json"
         }
       ]
     }
@@ -51,6 +55,7 @@
     "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js",
       "CrudoperationsWebPartStrings": "lib/webparts/crudoperations/loc/{locale}.js",
       "ChartspfxWebPartStrings": "lib/webparts/chartspfx/loc/{locale}.js",
+          "AddFolderAndSubFolderToDocumentLibraryWebPartStrings": "lib/webparts/addFolderAndSubFolderToDocumentLibrary/loc/{locale}.js",
       "MapIntegrationWebPartStrings": "lib/webparts/mapIntegration/loc/{locale}.js",
       "WeatherAqiWidgetWebPartStrings": "lib/webparts/weatherAqiWidget/loc/{locale}.js"  }
 }

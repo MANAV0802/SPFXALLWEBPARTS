@@ -7,7 +7,9 @@ import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import type { IReadonlyTheme } from '@microsoft/sp-component-base';
 
 import styles from './AddFolderAndSubFolderToDocumentLibraryWebPart.module.scss';
+// import * as strings from 'AddFolderAndSubFolderToDocumentLibraryWebPartStrings';
 import * as strings from 'AddFolderAndSubFolderToDocumentLibraryWebPartStrings';
+
 
 
 import { spfi, SPFx } from "@pnp/sp";
