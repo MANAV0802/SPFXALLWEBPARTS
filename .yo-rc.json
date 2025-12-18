@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.20.8",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "flight-status-tracker",
+    "libraryId": "a9b35100-f123-4556-be28-82c3081754e6",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "flight-status-tracker",
+    "solutionShortDescription": "flight-status-tracker description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

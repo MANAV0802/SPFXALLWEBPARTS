@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "flight-status-tracker-client-side-solution",
+    "id": "a9b35100-f123-4556-be28-82c3081754e6",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "flight-status-tracker description"
+      },
+      "longDescription": {
+        "default": "flight-status-tracker description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "flight-status-tracker Feature",
+        "description": "The feature that activates elements of the flight-status-tracker solution.",
+        "id": "2060ad49-f618-4f98-a4d9-b75b8a0f49a1",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/flight-status-tracker.sppkg"
+  }
+}

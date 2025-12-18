@@ -1,0 +1,743 @@
+/* ========== GLOBAL LAYOUT ========== */
+
+.flightStatus {
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", sans-serif;
+  padding: 18px;
+  background: radial-gradient(circle at top left, #fdf7e3 0, #f3f2f1 40%, #eef6ff 100%);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle decorative stripe */
+.flightStatus::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -60px;
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(135deg, rgba(0, 120, 212, 0.14), rgba(0, 120, 212, 0));
+  transform: rotate(8deg);
+  pointer-events: none;
+}
+
+/* ========== HEADER ========== */
+
+.header {
+  margin-bottom: 14px;
+  border-bottom: 1px solid #e1dfdd;
+  padding-bottom: 8px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.title::before {
+  content: "";
+  width: 8px;
+  height: 22px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #0078d4, #00b294);
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #605e5c;
+}
+
+/* ========== SEARCH BAR ========== */
+
+.searchPanel {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid #a19f9d;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  background-color: #ffffff;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #0078d4;
+  box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.2);
+  background-color: #fdfefe;
+}
+
+.searchButton {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #0078d4, #005a9e);
+  color: #ffffff;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, opacity 0.15s ease;
+}
+
+.searchButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
+  background: linear-gradient(135deg, #1080dd, #005a9e);
+}
+
+.searchButton:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.searchButton:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+/* Alerts */
+
+.infoMessage {
+  padding: 8px 10px;
+  background-color: #fff4ce;
+  border-left: 4px solid #ffb900;
+  font-size: 12px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.errorMessage {
+  padding: 8px 10px;
+  background-color: #fde7e9;
+  border-left: 4px solid #a4262c;
+  color: #a4262c;
+  font-size: 12px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* ========== PRIMARY CARD ========== */
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  animation: floatIn 0.4s ease-out;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.flightTitle {
+  display: flex;
+  flex-direction: column;
+}
+
+.flightNumber {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.airlineName {
+  font-size: 12px;
+  color: #605e5c;
+}
+
+.statusBadge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  background-color: #e1dfdd;
+  color: #323130;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Subtle “alive” animation for good status */
+.statusOk {
+  background-color: #dff6dd;
+  color: #107c10;
+  animation: pulse 2.3s ease-in-out infinite;
+}
+
+.statusBad {
+  background-color: #fde7e9;
+  color: #a4262c;
+}
+
+.statusNeutral {
+  background-color: #e1dfdd;
+  color: #323130;
+}
+
+.cardBody {
+  font-size: 13px;
+}
+
+.section {
+  margin-bottom: 10px;
+}
+
+.sectionTitle {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #605e5c;
+  margin-bottom: 4px;
+}
+
+.routeRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.airportBlock {
+  flex: 1;
+}
+
+.arrow {
+  font-size: 18px;
+  color: #605e5c;
+}
+
+.label {
+  font-size: 11px;
+  color: #605e5c;
+}
+
+.value {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.subValue {
+  font-size: 11px;
+  color: #605e5c;
+}
+
+.scheduleRow {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.scheduleBlock {
+  flex: 1;
+}
+
+.sectionFooter {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #605e5c;
+}
+
+.delayInfo {
+  font-weight: 500;
+  color: #d83b01;
+}
+
+.updateInfo {
+  text-align: right;
+}
+
+/* ===== LIVE STATUS CHIP ===== */
+
+.liveChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #a4262c;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 999px;
+  margin-right: 6px;
+  animation: livePulse 1.4s ease-in-out infinite;
+}
+
+.liveChip::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+/* ========== MAP CARD ========== */
+
+.mapCard {
+  margin-top: 12px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 10px 12px;
+  animation: floatIn 0.4s ease-out 0.08s backwards;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.mapCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.mapHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.mapFlightTitle {
+  font-size: 12px;
+  color: #323130;
+  margin-top: 2px;
+}
+
+.mapMeta {
+  font-size: 11px;
+  color: #605e5c;
+  margin-top: 2px;
+}
+
+.mapContainer {
+  margin-top: 4px;
+  height: 260px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e1dfdd;
+  transition: box-shadow 0.2s ease;
+}
+
+.mapContainer:hover {
+  box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.28);
+}
+
+.mapControls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+/* Map mode toggle */
+
+.mapModeToggle {
+  display: inline-flex;
+  border-radius: 999px;
+  background-color: #f3f2f1;
+  padding: 2px;
+}
+
+.mapModeButton,
+.mapModeButtonActive {
+  border: none;
+  padding: 2px 8px;
+  font-size: 11px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.mapModeButton {
+  background: transparent;
+  color: #323130;
+}
+
+.mapModeButton:hover {
+  background-color: #e1dfdd;
+  transform: translateY(-1px);
+}
+
+.mapModeButtonActive {
+  background-color: #0078d4;
+  color: #ffffff;
+}
+
+/* Legend */
+
+.mapLegend {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #605e5c;
+}
+
+.legendDot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  margin-right: 2px;
+}
+
+.legendDotDeparture {
+  background-color: #107c10;
+}
+
+.legendDotArrival {
+  background-color: #a4262c;
+}
+
+/* Auto refresh */
+
+.autoRefreshBar {
+  margin-top: 6px;
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+}
+
+.autoRefreshToggleOn,
+.autoRefreshToggleOff {
+  border-radius: 999px;
+  border: none;
+  padding: 3px 10px;
+  font-size: 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+}
+
+.autoRefreshToggleOff {
+  background-color: #f3f2f1;
+  color: #323130;
+}
+
+.autoRefreshToggleOn {
+  background-color: #0078d4;
+  color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.25);
+}
+
+.autoRefreshToggleOn:hover,
+.autoRefreshToggleOff:hover {
+  transform: translateY(-1px);
+}
+
+.autoRefreshDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background-color: #a19f9d;
+}
+
+.autoRefreshToggleOn .autoRefreshDot {
+  background-color: #00ff6a;
+}
+
+.autoRefreshCountdown {
+  color: #605e5c;
+}
+
+/* ========== RECENT FLIGHTS SECTION ========== */
+
+.dailyHeader {
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.titleSmall {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.dailySection {
+  margin-top: 4px;
+}
+
+.dailyTableWrapper {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  padding: 10px;
+  animation: floatIn 0.4s ease-out 0.14s backwards;
+}
+
+.dailyTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.dailyTable th,
+.dailyTable td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #edebe9;
+  text-align: left;
+}
+
+.dailyTable th {
+  font-weight: 600;
+  background-color: #f3f2f1;
+}
+
+.dailyTable tr:last-child td {
+  border-bottom: none;
+}
+
+.statusPill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+}
+
+.dailySummary {
+  margin-top: 6px;
+  font-size: 11px;
+  color: #605e5c;
+}
+
+/* Snapshot table row interactions */
+
+.snapshotRow,
+.snapshotRowSelected {
+  cursor: pointer;
+  transition: background-color 0.12s ease, transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.snapshotRow:hover {
+  background-color: #f3f2f1;
+  transform: translateX(2px);
+}
+
+.snapshotRowSelected {
+  background-color: #e1f3ff;
+  box-shadow: inset 2px 0 0 #0078d4;
+}
+
+/* Filters */
+
+.filtersRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.filterLabel {
+  font-size: 11px;
+  color: #605e5c;
+  margin-bottom: 2px;
+}
+
+.filterSelect {
+  min-width: 140px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  border: 1px solid #a19f9d;
+  font-size: 12px;
+  background-color: #ffffff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: #0078d4;
+  box-shadow: 0 0 0 1px rgba(0, 120, 212, 0.2);
+}
+
+/* ===== SHIMMER LOADING EFFECT ===== */
+
+.shimmerCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  margin-top: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.shimmerHeader,
+.shimmerLine,
+.shimmerLineShort {
+  background: linear-gradient(
+    90deg,
+    #eeeeee 25%,
+    #dddddd 37%,
+    #eeeeee 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+  border-radius: 6px;
+}
+
+.shimmerHeader {
+  height: 20px;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.shimmerLine {
+  height: 14px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.shimmerLineShort {
+  height: 14px;
+  width: 60%;
+}
+
+/* ========== ANIMATIONS ========== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(16, 124, 16, 0.35);
+  }
+  60% {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 6px rgba(16, 124, 16, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(16, 124, 16, 0);
+  }
+}
+
+@keyframes livePulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(164, 38, 44, 0.6);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 6px rgba(164, 38, 44, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(164, 38, 44, 0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+/* Animated plane marker on map */
+.planeMarker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background-color: #ffffff;
+  border: 2px solid #0078d4;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.45);
+  animation: planeBounce 1.2s ease-in-out infinite;
+}
+
+/* small bounce so it feels alive */
+@keyframes planeBounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-2px); }
+  100% { transform: translateY(0); }
+}
+
+/* --- Inner structure for labelled plane icon --- */
+.planeMarkerInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-2px);
+  pointer-events: none; /* let marker clicks still work on outer marker */
+}
+
+.planeEmoji {
+  width: 36px;
+  height: 36px;
+  border-radius: 20px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  border: 2px solid rgba(0,120,212,0.9);
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.planeLabel {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #003865;
+  background: rgba(255,255,255,0.95);
+  padding: 2px 6px;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  white-space: nowrap;
+  pointer-events: none;
+}
