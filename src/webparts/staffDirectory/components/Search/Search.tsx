@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ISearchProps } from './ISearchProps';
-import { SearchBox } from 'office-ui-fabric-react';
+import { SearchBox } from '@fluentui/react/lib/SearchBox';
 
 const Search: React.FC<ISearchProps> = ({ ...props }) => {
     return (

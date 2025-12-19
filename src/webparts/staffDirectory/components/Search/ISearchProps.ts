@@ -1,3 +1,3 @@
-import { ISearchBoxProps } from 'office-ui-fabric-react';
+import { ISearchBoxProps } from '@fluentui/react/lib/SearchBox';
 
 export interface ISearchProps extends ISearchBoxProps {}

@@ -4,7 +4,7 @@ import {
   IPropertyPaneField,
   PropertyPaneFieldType
 } from '@microsoft/sp-property-pane';
-import { IDropdownOption } from 'office-ui-fabric-react/lib/components/Dropdown';
+import { IDropdownOption } from '@fluentui/react';
 import { IPropertyPaneGroupSelectProps } from './IPropertyPaneGroupSelectProps';
 import GroupSelect from './GroupSelect';
 import { IGroupSelectProps } from './IGroupSelectProps';

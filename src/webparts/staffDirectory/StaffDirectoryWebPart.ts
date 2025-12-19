@@ -14,7 +14,7 @@ import {
   PropertyFieldCollectionData
 } from '@pnp/spfx-property-controls/lib/propertyFields/collectionData';
 import * as strings from 'StaffDirectoryWebPartStrings';
-import { IDropdownOption } from 'office-ui-fabric-react';
+import { IDropdownOption } from '@fluentui/react';
 import { PropertyFieldToggleWithCallout } from '@pnp/spfx-property-controls';
 import { PropertyPaneGroupSelect } from './controls/GroupSelect/PropertyPaneGroupSelect';
 import { update } from '@microsoft/sp-lodash-subset';

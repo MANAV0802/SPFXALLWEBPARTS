@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { IPagingProps } from './IPagingProps';
 import styles from './Paging.module.scss';
-import { IconButton } from 'office-ui-fabric-react';
+import { IconButton } from '@fluentui/react/lib/Button';
 
 const Paging: React.FC<IPagingProps> = ({
   count,

@@ -55,6 +55,10 @@
           {
           "entrypoint": "./lib/webparts/staffDirectory/StaffDirectoryWebPart.js",
           "manifest": "./src/webparts/staffDirectory/StaffDirectoryWebPart.manifest.json"
+        },
+                {
+          "entrypoint": "./lib/webparts/listCurdReact/ListCurdReactWebPart.js",
+          "manifest": "./src/webparts/listCurdReact/ListCurdReactWebPart.manifest.json"
         }
       ]
     }
@@ -71,9 +75,10 @@
           "AddFolderAndSubFolderToDocumentLibraryWebPartStrings": "lib/webparts/addFolderAndSubFolderToDocumentLibrary/loc/{locale}.js",
       "MapIntegrationWebPartStrings": "lib/webparts/mapIntegration/loc/{locale}.js",
         "OrganizationChartWebPartStrings": "lib/webparts/organizationChart/loc/{locale}.js",
-    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
      "StaffDirectoryWebPartStrings": "lib/webparts/staffDirectory/loc/{locale}.js",
-    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js",
-    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js",
+        "ListCurdReactWebPartStrings": "lib/webparts/listCurdReact/loc/{locale}.js",
+      "PlannerBoardWebPartStrings": "lib/webparts/plannerBoard/loc/{locale}.js",
+      "MermaidDiagramWebPartWebPartStrings": "lib/webparts/mermaidDiagramWebPart/loc/{locale}.js",
+      "SalesChartsWebPartStrings": "lib/webparts/salesCharts/loc/{locale}.js",
       "WeatherAqiWidgetWebPartStrings": "lib/webparts/weatherAqiWidget/loc/{locale}.js"  }
 }

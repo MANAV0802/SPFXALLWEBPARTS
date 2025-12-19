@@ -3,7 +3,7 @@ import {
   IDropdownOption,
   Dropdown,
   Spinner
-} from 'office-ui-fabric-react';
+} from '@fluentui/react';
 import { IGroupSelectProps } from './IGroupSelectProps';
 
 const GroupSelect: React.FC<IGroupSelectProps> = ({ ...props }) => {

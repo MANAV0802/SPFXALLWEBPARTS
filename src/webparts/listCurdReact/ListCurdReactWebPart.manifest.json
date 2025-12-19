@@ -1,0 +1,22 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "65e77d1e-ac3d-474a-8f84-9b9474af6564",
+  "alias": "ListCurdReactWebPart",
+  "componentType": "WebPart",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "TeamsPersonalApp", "TeamsTab", "SharePointFullPage"],
+  "supportsThemeVariants": true,
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", 
+    "group": { "default": "Advanced" },
+    "title": { "default": "ListCURDReact" },
+    "description": { "default": "ListCURDReact description" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "ListCURDReact"
+    }
+  }]
+}

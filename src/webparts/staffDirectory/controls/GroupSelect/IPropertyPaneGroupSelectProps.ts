@@ -1,5 +1,5 @@
 import { IPropertyPaneCustomFieldProps } from '@microsoft/sp-property-pane';
-import { IDropdownOption } from 'office-ui-fabric-react';
+import { IDropdownOption } from '@fluentui/react';
 
 export interface IPropertyPaneGroupSelectProps extends IPropertyPaneCustomFieldProps {
   label: string;
