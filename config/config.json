@@ -44,6 +44,10 @@
           "entrypoint": "./lib/webparts/addFolderAndSubFolderToDocumentLibrary/AddFolderAndSubFolderToDocumentLibraryWebPart.js",
           "manifest": "./src/webparts/addFolderAndSubFolderToDocumentLibrary/AddFolderAndSubFolderToDocumentLibraryWebPart.manifest.json"
         },
+         {
+          "entrypoint": "./lib/webparts/organizationChart/OrganizationChartWebPart.js",
+          "manifest": "./src/webparts/organizationChart/OrganizationChartWebPart.manifest.json"
+        },
                 {
           "entrypoint": "./lib/webparts/salesCharts/SalesChartsWebPart.js",
           "manifest": "./src/webparts/salesCharts/SalesChartsWebPart.manifest.json"
@@ -55,11 +59,15 @@
   "localizedResources": {
     "FlightStatusWebPartStrings": "lib/webparts/flightStatus/loc/{locale}.js",
     "HrAnnouncementsWebPartStrings": "lib/webparts/hrAnnouncements/loc/{locale}.js",
-    "HrAssistantAiwpWebPartStrings": "lib/webparts/hrAssistantAiwp/loc/{locale}.js",    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
+    "HrAssistantAiwpWebPartStrings": "lib/webparts/hrAssistantAiwp/loc/{locale}.js", 
+       "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
     "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js",
       "CrudoperationsWebPartStrings": "lib/webparts/crudoperations/loc/{locale}.js",
       "ChartspfxWebPartStrings": "lib/webparts/chartspfx/loc/{locale}.js",
           "AddFolderAndSubFolderToDocumentLibraryWebPartStrings": "lib/webparts/addFolderAndSubFolderToDocumentLibrary/loc/{locale}.js",
       "MapIntegrationWebPartStrings": "lib/webparts/mapIntegration/loc/{locale}.js",
+        "OrganizationChartWebPartStrings": "lib/webparts/organizationChart/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js",
       "WeatherAqiWidgetWebPartStrings": "lib/webparts/weatherAqiWidget/loc/{locale}.js"  }
 }
