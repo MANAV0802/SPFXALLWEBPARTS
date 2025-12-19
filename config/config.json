@@ -43,6 +43,10 @@
                 {
           "entrypoint": "./lib/webparts/addFolderAndSubFolderToDocumentLibrary/AddFolderAndSubFolderToDocumentLibraryWebPart.js",
           "manifest": "./src/webparts/addFolderAndSubFolderToDocumentLibrary/AddFolderAndSubFolderToDocumentLibraryWebPart.manifest.json"
+        },
+                {
+          "entrypoint": "./lib/webparts/salesCharts/SalesChartsWebPart.js",
+          "manifest": "./src/webparts/salesCharts/SalesChartsWebPart.manifest.json"
         }
       ]
     }
