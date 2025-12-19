@@ -1,0 +1,50 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.paging {
+    display: flex;
+    height: 48px;
+    padding: 0 8px;
+    border-radius: 2px;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+    background: "[theme: neutralLight, default: #f3f2f1]";
+    box-sizing: border-box;
+}
+
+.pages {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.pageActions {
+    display: flex;
+    align-items: center;
+
+    & i {
+        font-size: 12px;
+    }
+}
+
+.page {
+    color: "[theme: black, default: #000000]";
+}
+
+.active {
+    color: "[theme: white, default: #ffffff]";
+    background-color: "[theme: themePrimary, default: #0078d4]";
+    cursor: default;
+
+    &:hover {
+        background: "[theme: themePrimary, default: #0078d4]";
+    }
+}
+
+.count {
+    color: "[theme: black, default: #000]";
+    & span {
+        font-size: 14px;
+    }
+}
